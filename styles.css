@@ -500,20 +500,55 @@ body .btn-custom:hover {
     margin-top: 30px;
 }
 
-#achievements .section-body {
-    width: 755px;
-    height: 176px;
-    flex-shrink: 0;
-    margin: 20px auto 0;
+.achievement-item {
     text-align: center;
-    font-family: Kanit;
-    font-size: 25px;
-    background: linear-gradient(180deg, #b8b8b8 0%, #b8b8b8 0%, #EBEBEB 0.01%, #999999 100%, rgba(20, 20, 20, 0.00) 100%, #aaaaaa 100%, #cccccc 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 2;
+    background-color: #121212;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #fff;
 }
+
+.achievement-item:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.achievement-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.achievement-description {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    color: #ddd;
+}
+
+#achievements .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Creates two columns */
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #achievements .achievements-grid {
+        grid-template-columns: 1fr; /* Switches to a single column on smaller screens */
+    }
+}
+
+
 
 /* Contact Me */
 #contact-me .section-heading {
@@ -531,17 +566,51 @@ body .btn-custom:hover {
     z-index: 2;
 }
 
-#contact-me .section-body {
-    width: 755px;
-    height: 176px;
-    flex-shrink: 0;
-    margin: 20px auto 0;
+#contact-me .contact-grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-item {
     text-align: center;
-    font-family: Kanit;
+    margin: 15px;
+}
+
+.contact-logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.contact-text {
+    font-family: 'Kanit', sans-serif;
+    color: #fff;
     font-size: 25px;
-    background: linear-gradient(180deg, #b8b8b8 0%, #b8b8b8 0%, #EBEBEB 0.01%, #999999 100%, rgba(20, 20, 20, 0.00) 100%, #aaaaaa 100%, #cccccc 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 2;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+    #contact-me .contact-grid {
+        flex-direction: column;
+    }
+}
+
+#planet5 {
+    position: absolute;
+    top: 5630px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#planet5 img {
+    width: 150%;
+    height: auto;
+    transform: scale(1.6) rotate(180deg);
+}
+
+.bottom-spacer {
+    height: 300px;
 }
