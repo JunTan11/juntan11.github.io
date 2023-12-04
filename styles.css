@@ -500,6 +500,20 @@ body .btn-custom:hover {
     margin-top: 30px;
 }
 
+.section-subheading {
+    width: auto;
+    margin-top: 5px;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 55px;
+    color: #EBEBEB;
+    background: linear-gradient(180deg, #292929 0%, #292929 0%, #EBEBEB 0.01%, #000 100%, rgba(20, 20, 20, 0.00) 100%, #141414 100%, #333 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 20px;
+}
+
 .achievement-item {
     text-align: center;
     background-color: #121212;
@@ -514,8 +528,8 @@ body .btn-custom:hover {
 }
 
 .achievement-img {
-    width: 100%;
-    max-width: 150px;
+    width: 200%;
+    max-width: 300px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -535,19 +549,17 @@ body .btn-custom:hover {
 
 #achievements .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Creates two columns */
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
     align-items: start;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     #achievements .achievements-grid {
-        grid-template-columns: 1fr; /* Switches to a single column on smaller screens */
+        grid-template-columns: 1fr;
     }
 }
-
 
 
 /* Contact Me */
@@ -555,7 +567,7 @@ body .btn-custom:hover {
     width: 755px;
     height: 176px;
     flex-shrink: 0;
-    margin: 0px auto 0;
+    margin: 50px auto 0;
     text-align: center;
     font-family: Russo One;
     font-size: 70px;
@@ -575,7 +587,7 @@ body .btn-custom:hover {
 
 .contact-item {
     text-align: center;
-    margin: 15px;
+    margin: 5px;
 }
 
 .contact-logo {
@@ -590,7 +602,6 @@ body .btn-custom:hover {
     font-size: 25px;
 }
 
-/* Responsive adjustments if needed */
 @media (max-width: 768px) {
     #contact-me .contact-grid {
         flex-direction: column;
@@ -599,7 +610,7 @@ body .btn-custom:hover {
 
 #planet5 {
     position: absolute;
-    top: 5630px;
+    top: 6430px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
