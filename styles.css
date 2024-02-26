@@ -7,6 +7,10 @@ html {
     transition: opacity 0.8s ease-in-out;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 img, div, section {
     max-width: 100%;
     box-sizing: border-box;
@@ -173,13 +177,12 @@ section {
 }
 
 
-
 /* About Me */
 #about-me .section-heading {
     width: 755px;
     height: 176px;
     flex-shrink: 0;
-    margin: 0px auto 0;
+    margin: 15px auto 0;
     text-align: center;
     font-family: Russo One;
     font-size: 70px;
@@ -301,7 +304,7 @@ section {
     width: 755px;
     height: 176px;
     flex-shrink: 0;
-    margin: 0px auto 0;
+    margin: 15px auto 0;
     text-align: center;
     font-family: Russo One;
     font-size: 70px;
@@ -400,7 +403,7 @@ section {
 .main-heading {
     width: 755px;
     height: 176px;
-    margin: 0 auto;
+    margin: 10px auto;
     text-align: center;
     font-family: 'Russo One', sans-serif;
     font-size: 70px;
@@ -410,34 +413,39 @@ section {
     color: transparent;
     margin-bottom:-50px;
 }
-
-/* Carousel CSS */
-#projectCarousel {
-    max-width: 850px;
-    margin: auto;
+/* Projects Grid CSS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns, each taking up half of the grid */
+    gap: 20px; /* Space between grid items */
+    width: 80%; /* Grid takes up 80% of its parent's width */
+    max-width: 850px; /* Optional: Adjust or remove based on your design needs */
+    margin: 0 auto; /* Centers the grid horizontally */
     margin-bottom: 100px;
 }
 
-.carousel-inner .carousel-item {
-    transition: transform 0.65s ease-in-out;
+.project-item {
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.7); /* Dark background with some transparency */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.project-item.large {
+    grid-column: span 2; /* Adjust this if you want the large item to span across both columns */
+}
+
 
 /* Image CSS */
 .custom-img {
     width: auto;
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
-    max-height: 150px;
-}
-
-/* Outline Rectangle CSS */
-.carousel-item {
-    border: 2px solid #fff;
-    border-radius: 30px;
-    background: transparent;
-    color: white;
-    padding: 20px;
-    text-align: center;
 }
 
 /* Subheading CSS */
@@ -477,8 +485,7 @@ body .btn-custom {
 }
 
 body .btn-custom:hover {
-    background-color: #682a2a;
-    color: white;
+    background-color: rgb(204, 204, 204);
     transform: scale(1.1);
 }
 
@@ -488,7 +495,7 @@ body .btn-custom:hover {
     width: 755px;
     height: 176px;
     flex-shrink: 0;
-    margin: 0px auto 0;
+    margin: 15px auto 0;
     text-align: center;
     font-family: Russo One;
     font-size: 70px;
@@ -567,7 +574,7 @@ body .btn-custom:hover {
     width: 755px;
     height: 176px;
     flex-shrink: 0;
-    margin: 50px auto 0;
+    margin: 55px auto 0;
     text-align: center;
     font-family: Russo One;
     font-size: 70px;
