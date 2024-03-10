@@ -632,3 +632,53 @@ body .btn-custom:hover {
 .bottom-spacer {
     height: 300px;
 }
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section img {
+    display: block;
+    margin: 0 auto;
+}
+
+.return-to-projects {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.section-heading {
+    width: 755px;
+    height: 176px;
+    flex-shrink: 0;
+    margin: 15px auto 0;
+    text-align: center;
+    font-family: Russo One;
+    font-size: 70px;
+    background: linear-gradient(180deg, #292929 0%, #292929 0%, #EBEBEB 0.01%, #000 100%, rgba(20, 20, 20, 0.00) 100%, #141414 100%, #333 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+    margin-top: 30px;
+}
+
+.section-body {
+    width: 755px;
+    height: 176px;
+    flex-shrink: 0;
+    margin: 20px auto 0;
+    text-align: center;
+    font-family: Kanit;
+    font-size: 23px;
+    background: linear-gradient(180deg, #b8b8b8 0%, #b8b8b8 0%, #EBEBEB 0.01%, #999999 100%, rgba(20, 20, 20, 0.00) 100%, #aaaaaa 100%, #cccccc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+}
