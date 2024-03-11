@@ -598,9 +598,14 @@ body .btn-custom:hover {
 }
 
 .contact-logo {
-    width: 300px;
+    width: 200px;
     height: auto;
     margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-logo:hover {
+    transform: scale(1.1);
 }
 
 .contact-text {
