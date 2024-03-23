@@ -48,8 +48,49 @@
         <h1 class="section-heading">Project Details</h1>
         <img src="assets\scseworkflow.png" alt="Project Logo" style="max-width: 800px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
         <p class="section-body">To use the bin, an image of the item is taken, and the bin would open the suitable category for the user to throw their recyclable. If the object is not a recyclable, the bin would not open any categories.</p>
+        
         <img src="assets\ecomonkeyapp.png" alt="Project Logo" style="max-width: 400px; display: block; margin: 5px auto;">
         <p class="section-body">I developed a prototype Android app as a demo. It enables users to capture a photo of their recyclables, which is then transmitted to my computer using email as a provisional solution.</p>
+        
+        <img src= "assets\helpercode.jpg" style="max-width: 600px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <p class="section-body">To automatically receive and classify images, we made a Python script that gets the image, and sends it to the Classifier Model, which would output a text file with the results.</p>
+        <p class="section-body">Upon successful retrieval and storage of the image, we call upon our AI model to make a prediction. We have fine-tuned a model based on a pre-existing model on Kaggle. Our modifications have further tailored the model to work better with our images taken.</p>
+        
+        <p class="section-body">
+            <a href="https://www.kaggle.com/code/aadhavvignesh/pytorch-garbage-classification-95-accuracy" target="_blank" rel="noopener noreferrer" class="external-link">
+                Original model from Kaggle: Garbage Classification (~95% accuracy)
+            </a>
+        </p>
+
+        <img src="assets\modelbase.jpg" style="max-width: 650px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <p class="section-body">Our solution employs a deep learning approach using a convolutional neural network (CNN), using PyTorch, a library for machine learning. Our ImageClassificationBase class includes methods for the training step, end-of-epoch actions, allowing us to generate predictions and update model accuracy metrics.</p>
+        <p class="section-body">For our architecture, we opted for a pre-trained ResNet50 model, which has proven highly effective in image classification tasks.</p>
+
+        <img src="assets\loadingsplitting.jpg" style="max-width: 600px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <img src="assets\training.jpg" style="max-width: 600px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <p class="section-body">We divided our dataset into three distinct sets: training, validation, and testing. The training set is used to train the model, the validation set to adjust hyperparameters and prevent overfitting, and the test set to evaluate the model's performance on unseen data.</p>
+        
+        <p class="section-body">We selected the Adam optimizer for training due to its adaptive learning rate properties, which helps in converging to the minimum loss more efficiently than traditional gradient descent methods.</p>
+
+        <img src="assets\graph1.jpg" style="max-width: 600px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <p class="section-body">Our model's accuracy and loss during the training process were plotted over epochs. The accuracy graph shows a general upward trend, indicating our model was learning effectively. However, there were some fluctuations, which is normal in a training process.</p>
+
+        <img src="assets\graph2.jpg" style="max-width: 600px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <p class="section-body">The loss graph indicated a decrease in both training and validation loss, confirming the effectiveness of our learning process and the model's ability to generalise well.</p>
+
+        <img src="assets\prediction.jpg" style="max-width: 600px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <p class="section-body">To test out the model, external images could be imported in, and fed into the model to be predicted.</p>
+
+        <img src="assets/outputhandler.jpg" style="max-width: 600px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <p class="section-body">The output handler script mainly reads the Classifier model's output, converting the appropriate output to a designated colour. Tkinter is used to display the colour on the computer's screen.</p>
+
+        <img src="assets/internallid.jpg" style="max-width: 600px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <p class="section-body">A sensor on the computer screen would detect the colour, and then open the correct category for the recyclable to be thrown in. The LEGO Mindstorms EV3 was used for the robotics, allowing for the mechanical movement of the lid openings.</p>
+        
+        <img src="assets/scsepresentation.png" style="max-width: 400px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <img src="assets/scsegroup.png" style="max-width: 650px; display: block; margin: 5px auto; box-shadow: 0 0 15px 10px #883434;">
+        <p class="section-body">Reflecting on the journey, the SCSE's Computing Challenge was a profound learning experience. The 1 month of dedication to developing EcoMonkey honed our multidisciplinary skills, and emphasised the significance of teamwork. Winning first place was a indication of our solution's potential and our collective drive to make a tangible impact on recycling habits.</p>
+
         <!-- Button to go back to the Projects section of the main page -->
         <div class="return-to-projects">
             <a href="index.html#projects" class="btn btn-custom" role="button">Back to Projects</a>

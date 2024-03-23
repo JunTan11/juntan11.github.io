@@ -687,3 +687,15 @@ section img {
     -webkit-text-fill-color: transparent;
     z-index: 2;
 }
+
+.external-link {
+    color: #007bff;
+    font-size: 1.25em;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.external-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
