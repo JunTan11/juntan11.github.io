@@ -176,6 +176,70 @@ section {
     margin-top: -100px;
 }
 
+/*Experience*/
+#experience .section-heading {
+    width: 755px;
+    height: 176px;
+    flex-shrink: 0;
+    margin: 15px auto 0;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 70px;
+    background: linear-gradient(180deg, #292929 0%, #292929 0%, #EBEBEB 0.01%, #000 100%, rgba(20, 20, 20, 0.00) 100%, #141414 100%, #333 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+}
+
+#experience .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.experience-item {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-10px);
+}
+
+.experience-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.experience-subtext {
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.experience-description {
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    color: #ddd;
+}
+
+@media (max-width: 768px) {
+    #experience .experience-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* About Me */
 #about-me .section-heading {
@@ -200,7 +264,7 @@ section {
     margin: -80px auto 0;
     text-align: center;
     font-family: Kanit;
-    font-size: 23px;
+    font-size: 29px;
     background: linear-gradient(180deg, #b8b8b8 0%, #b8b8b8 0%, #EBEBEB 0.01%, #999999 100%, rgba(20, 20, 20, 0.00) 100%, #aaaaaa 100%, #cccccc 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -413,21 +477,21 @@ section {
     color: transparent;
     margin-bottom:-50px;
 }
-/* Projects Grid CSS */
+/* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns, each taking up half of the grid */
-    gap: 20px; /* Space between grid items */
-    width: 80%; /* Grid takes up 80% of its parent's width */
-    max-width: 850px; /* Optional: Adjust or remove based on your design needs */
-    margin: 0 auto; /* Centers the grid horizontally */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 850px;
+    margin: 0 auto;
     margin-bottom: 100px;
 }
 
 .project-item {
     border: 2px solid #fff;
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.7); /* Dark background with some transparency */
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     padding: 20px;
     text-align: center;
@@ -437,7 +501,7 @@ section {
 }
 
 .project-item.large {
-    grid-column: span 2; /* Adjust this if you want the large item to span across both columns */
+    grid-column: span 2;
 }
 
 
